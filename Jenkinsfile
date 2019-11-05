@@ -1,10 +1,10 @@
 pipeline{
     agent any
+    options{
+        timestamps()
+    }
     stages{
         stage("Tamanna"){
-        options{
-            timestamps()
-        }
             steps{
                 echo "tamanna is my favourite actor"
                 echo "tamanna is always beautiful"
