@@ -7,7 +7,10 @@ pipeline{
             }
             steps {
                 echo "====++++something++++===="
-                error "====++++super error++++===="
+                script{
+                    currentBuild.result = 'FAILURE'
+                }
+                
                 echo "====++++nothing++++===="
 
             }
