@@ -3,7 +3,19 @@ pipeline{
     stages{
         stage("Build"){
             steps{
-                echo "this is 1st pipeline"
+                
+                script{
+
+                    def name == "saidalli"
+
+                    if(name == "saidalli")
+                        println("hi $(name)")
+                    else
+                        println("hi human")
+
+                    sleep 2
+                    echo "the end of script"
+                }
             }
         }
     }
