@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("Tamanna"){
         options{
-            timestamp()
+            timestamps()
         }
             steps{
                 echo "tamanna is my favourite actor"
