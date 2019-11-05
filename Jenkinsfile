@@ -1,22 +1,22 @@
-pipeline{
-    agent any
-    stages{
-        stage("Build"){
-            steps{
-                
-                script{
+    pipeline{
+        agent any
+        stages{
+            stage("Build"){
+                steps{
+                    
+                    script{
 
-                    def name = "saidalli"
+                        def name = "saidalli"
 
-                    if(name == "saidalli")
-                        println("hi $(name)")
-                    else
-                        println("hi human")
+                        if(name == "saidalli")
+                            println("hi ${name}")
+                        else
+                            println("hi human")
 
-                    sleep 2
-                    echo "the end of script"
+                        sleep 2
+                        echo "the end of script"
+                    }
                 }
             }
         }
     }
-}
