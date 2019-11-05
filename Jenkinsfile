@@ -6,7 +6,7 @@ pipeline{
                     retry(3){
                         timeout(time: 1, unit: 'SECONDS')   
                         {
-                        sleep2
+                        sleep 2
                         }
                     echo "after timeout"
                 }
