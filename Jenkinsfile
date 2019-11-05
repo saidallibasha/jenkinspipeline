@@ -7,7 +7,7 @@ pipeline{
             }
             steps {
                 echo "====++++something++++===="
-                echo "====++++anything++++===="
+                error "====++++super error++++===="
                 echo "====++++nothing++++===="
 
             }
