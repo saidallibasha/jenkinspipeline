@@ -1,18 +1,19 @@
 pipeline{
     agent any
     stages{
-        stage("Build"){
-            options{
-                retry(3)
+        stage("Tamanna"){
+        options{
+            timestamp()
+        }
+            steps{
+                echo "tamanna is my favourite actor"
+                echo "tamanna is always beautiful"
             }
-            steps {
-                echo "====++++something++++===="
-                script{
-                    currentBuild.result = 'FAILURE'
-                }
-                
-                echo "====++++nothing++++===="
-
+        }
+        stage("rakulpreeth"){
+            steps{
+                echo "rakul came recently"
+                echo "rakul is also hot but not better than tamanna"
             }
         }
 
