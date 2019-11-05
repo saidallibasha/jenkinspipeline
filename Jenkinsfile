@@ -3,18 +3,13 @@
         stages{
             stage("Build"){
                 steps{
-                    
-                    script{
+                    retry(3){
+                        echo "before throwing error"
+                        error "error in retry"
 
-                        def name = "saidalli"
+                    }
 
-                        if(name == "saidalli")
-                            println("hi ${name}")
-                        else
-                            println("hi human")
-
-                        sleep 2
-                        echo "the end of script"
+                    echo "after retry"
                     }
                 }
             }
