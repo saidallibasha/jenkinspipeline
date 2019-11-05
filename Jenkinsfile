@@ -3,10 +3,12 @@ pipeline{
         stages{
             stage("Build"){
                 steps{
-                    timeout(time: 1, unit: 'SECONDS')
-                    {
-                    echo "sleeping in timeout"
-                    sleep 2
+                    retry(3){
+                        timeout(time: 1, unit: 'SECONDS')   
+                        {
+                        sleep2
+                        }
+                    echo "after timeout"
                 }
             }
         }
