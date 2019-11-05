@@ -6,7 +6,7 @@ pipeline{
                 
                 script{
 
-                    def name == "saidalli"
+                    def name = "saidalli"
 
                     if(name == "saidalli")
                         println("hi $(name)")
