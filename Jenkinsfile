@@ -1,13 +1,17 @@
 pipeline{
     agent any
-        stages {
-            stage("BUild"){
-                tools {
-                    maven 'localMaven'
-                }
-                steps{
-                    sh "mvn --version"
-                }
+    stages{
+        stage("Build"){
+            options{
+                retry(3)
+            }
+            steps {
+                echo "====++++something++++===="
+                echo "====++++anything++++===="
+                echo "====++++nothing++++===="
+
             }
         }
+
+    }
 }
