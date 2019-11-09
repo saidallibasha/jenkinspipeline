@@ -1,22 +1,17 @@
 pipeline {
     agent any
-        environment {
-            name1 = "Vinni"
-            name2 = "pavani"
-        }
-
+    environment {
+        DEPLOY = "prod"
+    }
         stages {
-            stage('Actress'){
-                environment{
-                    name3 = "yamini bhaskar"
+            stage("prod"){
+                when {
+                    environment name: "DEPLOY", value: "prod"
                 }
-
-                steps {
-                    echo "cute ${name1}"
-                    echo "hot ${name2}"
-                    echo "beautiful ${name3}"
-                    sh "printenv"
+                steps{
+                    echo "Deployed to production"
                 }
             }
         }
+
 }
