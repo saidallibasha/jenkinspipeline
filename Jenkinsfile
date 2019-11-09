@@ -15,6 +15,7 @@ pipeline {
                     echo "cute ${name1}"
                     echo "hot ${name2}"
                     echo "beautiful ${name3}"
+                    sh "printenv"
                 }
             }
         }
